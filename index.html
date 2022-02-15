@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, user-scalable=no" />
+    <title>Hẹn Hò Social</title>
+
+    <!-- Style -->
+    <link rel="stylesheet" href="assets/css/boostrap.css">
+    <link rel="stylesheet" href="assets/css/theme.css">
+    <link rel="stylesheet" href="libs/slick/slick-theme.css">
+    <link rel="stylesheet" href="libs/slick/slick.css">
+    <link rel="stylesheet" href="style.css">
+    <!-- End Style -->
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header hide-on-mobile-tablet">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="header__wrapper">
+                        <div class="header__left">
+                            <div class="header__logo">
+                                <a href="index.html" class="header__logo-link">
+                                    <img src="assets/images/logo.svg" alt="Hẹn Hò Social" class="header__logo-img">
+                                </a>
+                            </div>
+                            <div class="header__search">
+                                <form action="" class="header__search-form">
+                                    <div class="header__search-form-wrapper">
+                                        <button type="submit" class="header__search-btn">
+                                            <img src="assets/images/ic-search.svg" alt=""
+                                                class="header__search-btn-icon">
+                                        </button>
+                                        <input type="text" class="header__search-input"
+                                            placeholder="Tìm kiếm bạn bè...">
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="header__menu">
+                            <ul class="header__menu-list">
+                                <li class="menu-item current-menu-item">
+                                    <a href="">
+                                        <span class="menu-item__icon">
+                                            <svg viewBox="0 0 28 28" height="28" width="28">
+                                                <path
+                                                    d="M17.5 23.979 21.25 23.979C21.386 23.979 21.5 23.864 21.5 23.729L21.5 13.979C21.5 13.427 21.949 12.979 22.5 12.979L24.33 12.979 14.017 4.046 3.672 12.979 5.5 12.979C6.052 12.979 6.5 13.427 6.5 13.979L6.5 23.729C6.5 23.864 6.615 23.979 6.75 23.979L10.5 23.979 10.5 17.729C10.5 17.04 11.061 16.479 11.75 16.479L16.25 16.479C16.939 16.479 17.5 17.04 17.5 17.729L17.5 23.979ZM21.25 25.479 17 25.479C16.448 25.479 16 25.031 16 24.479L16 18.327C16 18.135 15.844 17.979 15.652 17.979L12.348 17.979C12.156 17.979 12 18.135 12 18.327L12 24.479C12 25.031 11.552 25.479 11 25.479L6.75 25.479C5.784 25.479 5 24.695 5 23.729L5 14.479 3.069 14.479C2.567 14.479 2.079 14.215 1.868 13.759 1.63 13.245 1.757 12.658 2.175 12.29L13.001 2.912C13.248 2.675 13.608 2.527 13.989 2.521 14.392 2.527 14.753 2.675 15.027 2.937L25.821 12.286C25.823 12.288 25.824 12.289 25.825 12.29 26.244 12.658 26.371 13.245 26.133 13.759 25.921 14.215 25.434 14.479 24.931 14.479L23 14.479 23 23.729C23 24.695 22.217 25.479 21.25 25.479Z">
+                                                </path>
+                                            </svg>
+                                        </span>
+                                        <span class="menu-item__icon-active">
+                                            <svg viewBox="0 0 28 28" height="28" width="28">
+                                                <path
+                                                    d="M25.825 12.29C25.824 12.289 25.823 12.288 25.821 12.286L15.027 2.937C14.752 2.675 14.392 2.527 13.989 2.521 13.608 2.527 13.248 2.675 13.001 2.912L2.175 12.29C1.756 12.658 1.629 13.245 1.868 13.759 2.079 14.215 2.567 14.479 3.069 14.479L5 14.479 5 23.729C5 24.695 5.784 25.479 6.75 25.479L11 25.479C11.552 25.479 12 25.031 12 24.479L12 18.309C12 18.126 12.148 17.979 12.33 17.979L15.67 17.979C15.852 17.979 16 18.126 16 18.309L16 24.479C16 25.031 16.448 25.479 17 25.479L21.25 25.479C22.217 25.479 23 24.695 23 23.729L23 14.479 24.931 14.479C25.433 14.479 25.921 14.215 26.132 13.759 26.371 13.245 26.244 12.658 25.825 12.29">
+                                                </path>
+                                            </svg>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="">
+                                        <span class="menu-item__icon">
+                                            <svg viewBox="0 0 28 28" height="28" width="28">
+                                                <path
+                                                    d="M25.5 14C25.5 7.649 20.351 2.5 14 2.5 7.649 2.5 2.5 7.649 2.5 14 2.5 20.351 7.649 25.5 14 25.5 20.351 25.5 25.5 20.351 25.5 14ZM27 14C27 21.18 21.18 27 14 27 6.82 27 1 21.18 1 14 1 6.82 6.82 1 14 1 21.18 1 27 6.82 27 14ZM7.479 14 7.631 14C7.933 14 8.102 14.338 7.934 14.591 7.334 15.491 6.983 16.568 6.983 17.724L6.983 18.221C6.983 18.342 6.99 18.461 7.004 18.578 7.03 18.802 6.862 19 6.637 19L6.123 19C5.228 19 4.5 18.25 4.5 17.327 4.5 15.492 5.727 14 7.479 14ZM20.521 14C22.274 14 23.5 15.492 23.5 17.327 23.5 18.25 22.772 19 21.878 19L21.364 19C21.139 19 20.97 18.802 20.997 18.578 21.01 18.461 21.017 18.342 21.017 18.221L21.017 17.724C21.017 16.568 20.667 15.491 20.067 14.591 19.899 14.338 20.067 14 20.369 14L20.521 14ZM8.25 13C7.147 13 6.25 11.991 6.25 10.75 6.25 9.384 7.035 8.5 8.25 8.5 9.465 8.5 10.25 9.384 10.25 10.75 10.25 11.991 9.353 13 8.25 13ZM19.75 13C18.647 13 17.75 11.991 17.75 10.75 17.75 9.384 18.535 8.5 19.75 8.5 20.965 8.5 21.75 9.384 21.75 10.75 21.75 11.991 20.853 13 19.75 13ZM15.172 13.5C17.558 13.5 19.5 15.395 19.5 17.724L19.5 18.221C19.5 19.202 18.683 20 17.677 20L10.323 20C9.317 20 8.5 19.202 8.5 18.221L8.5 17.724C8.5 15.395 10.441 13.5 12.828 13.5L15.172 13.5ZM16.75 9C16.75 10.655 15.517 12 14 12 12.484 12 11.25 10.655 11.25 9 11.25 7.15 12.304 6 14 6 15.697 6 16.75 7.15 16.75 9Z">
+                                                </path>
+                                            </svg>
+                                        </span>
+                                        <span class="menu-item__icon-active">
+                                            <svg viewBox="0 0 28 28" height="28" width="28">
+                                                <path
+                                                    d="M21.877 19 21.364 19C21.139 19 20.971 18.802 20.996 18.577 21.01 18.461 21.017 18.342 21.017 18.221L21.017 17.724C21.017 16.568 20.667 15.491 20.066 14.591 19.899 14.338 20.067 14 20.369 14L20.521 14C22.274 14 23.5 15.492 23.5 17.327 23.5 18.25 22.772 19 21.877 19ZM17.75 10.75C17.75 9.384 18.535 8.5 19.75 8.5 20.965 8.5 21.75 9.384 21.75 10.75 21.75 11.991 20.853 13 19.75 13 18.647 13 17.75 11.991 17.75 10.75ZM19.5 18.221C19.5 19.202 18.682 20 17.678 20L10.323 20C9.317 20 8.5 19.202 8.5 18.221L8.5 17.724C8.5 15.395 10.442 13.5 12.828 13.5L15.173 13.5C17.559 13.5 19.5 15.395 19.5 17.724L19.5 18.221ZM6.25 10.75C6.25 9.384 7.035 8.5 8.25 8.5 9.465 8.5 10.25 9.384 10.25 10.75 10.25 11.991 9.353 13 8.25 13 7.147 13 6.25 11.991 6.25 10.75ZM7.934 14.591C7.334 15.491 6.983 16.568 6.983 17.724L6.983 18.221C6.983 18.342 6.991 18.461 7.004 18.577 7.03 18.802 6.861 19 6.637 19L6.123 19C5.228 19 4.5 18.25 4.5 17.327 4.5 15.492 5.727 14 7.479 14L7.631 14C7.933 14 8.102 14.338 7.934 14.591ZM14 6C15.697 6 16.75 7.15 16.75 9 16.75 10.655 15.517 12 14 12 12.484 12 11.25 10.655 11.25 9 11.25 7.15 12.304 6 14 6ZM14 1C6.832 1 1 6.832 1 14 1 21.169 6.832 27 14 27 21.169 27 27 21.169 27 14 27 6.832 21.169 1 14 1Z">
+                                                </path>
+                                            </svg>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="">
+                                        <span class="menu-item__icon">
+                                            <svg viewBox="0 0 28 28" height="28" width="28">
+                                                <path
+                                                    d="M8.75 25.25C8.336 25.25 8 24.914 8 24.5 8 24.086 8.336 23.75 8.75 23.75L19.25 23.75C19.664 23.75 20 24.086 20 24.5 20 24.914 19.664 25.25 19.25 25.25L8.75 25.25ZM17.163 12.846 12.055 15.923C11.591 16.202 11 15.869 11 15.327L11 9.172C11 8.631 11.591 8.297 12.055 8.576L17.163 11.654C17.612 11.924 17.612 12.575 17.163 12.846ZM21.75 20.25C22.992 20.25 24 19.242 24 18L24 6.5C24 5.258 22.992 4.25 21.75 4.25L6.25 4.25C5.008 4.25 4 5.258 4 6.5L4 18C4 19.242 5.008 20.25 6.25 20.25L21.75 20.25ZM21.75 21.75 6.25 21.75C4.179 21.75 2.5 20.071 2.5 18L2.5 6.5C2.5 4.429 4.179 2.75 6.25 2.75L21.75 2.75C23.821 2.75 25.5 4.429 25.5 6.5L25.5 18C25.5 20.071 23.821 21.75 21.75 21.75Z">
+                                                </path>
+                                            </svg>
+                                        </span>
+                                        <span class="menu-item__icon-active">
+                                            <svg viewBox="0 0 28 28" height="28" width="28">
+                                                <path
+                                                    d="M8.75 25.25C8.336 25.25 8 24.914 8 24.5 8 24.086 8.336 23.75 8.75 23.75L19.25 23.75C19.664 23.75 20 24.086 20 24.5 20 24.914 19.664 25.25 19.25 25.25L8.75 25.25ZM17.164 12.846 12.055 15.923C11.591 16.202 11 15.869 11 15.327L11 9.172C11 8.631 11.591 8.297 12.055 8.576L17.164 11.654C17.612 11.924 17.612 12.575 17.164 12.846M21.75 2.75 6.25 2.75C4.182 2.75 2.5 4.432 2.5 6.5L2.5 18C2.5 20.068 4.182 21.75 6.25 21.75L21.75 21.75C23.818 21.75 25.5 20.068 25.5 18L25.5 6.5C25.5 4.432 23.818 2.75 21.75 2.75">
+                                                </path>
+                                            </svg>
+                                        </span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="header__right">
+                            <div class="header__account">
+                                <a href="" class="header__account-link">
+                                    <img src="assets/images/avatar.png" alt="" class="header__account-avatar">
+                                    <span class="header__account-name">Tuyết Lan</span>
+                                </a>
+                            </div>
+                            <div class="header__navbar">
+                                <ul class="header__navbar-list">
+                                    <li class="header__navbar-item header__navbar-item--messenger">
+                                        <a href="#" class="header__navbar-item-link">
+                                            <img src="assets/images/ic-messenger.svg" alt=""
+                                                class="header__navbar-item-icon">
+                                        </a>
+                                    </li>
+                                    <li
+                                        class="header__navbar-item header__navbar-item--noti header__navbar-item--has-bage">
+                                        <a href="#" class="header__navbar-item-link">
+                                            <img src="assets/images/ic-noti.svg" alt=""
+                                                class="header__navbar-item-icon">
+                                            <span class="header__navbar-item-bage">1</span>
+                                        </a>
+                                    </li>
+                                    <li class="header__navbar-item header__navbar-item--optional">
+                                        <a href="#" class="header__navbar-item-link">
+                                            <img src="assets/images/ic-dropdown.svg" alt=""
+                                                class="header__navbar-item-icon">
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- End Header -->
+
+    <!-- Header Mobile -->
+    <header class="header-mobile">
+        <div class="header-mobile__topbar">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="header__wrapper">
+                            <div class="header-mobile__account">
+                                <img src="assets/images/avatar.png" alt="" class="header__account-avatar">
+                            </div>
+                            <div class="header__search">
+                                <form action="" class="header__search-form">
+                                    <div class="header__search-form-wrapper">
+                                        <button type="submit" class="header__search-btn">
+                                            <img src="assets/images/ic-search.svg" alt=""
+                                                class="header__search-btn-icon">
+                                        </button>
+                                        <input type="text" class="header__search-input"
+                                            placeholder="Tìm kiếm bạn bè...">
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="header-mobile__messenger">
+                                <a href="#" class="header-mobile__messenger-link">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                        <path
+                                            d="M12 3c-4.92 0-8.91 3.729-8.91 8.332 0 2.616 1.291 4.952 3.311 6.479V21l3.041-1.687c.811.228 1.668.35 2.559.35 4.92 0 8.91-3.73 8.91-8.331C20.91 6.729 16.92 3 12 3zm.938 11.172-2.305-2.394-4.438 2.454 4.865-5.163 2.305 2.395 4.439-2.455-4.866 5.163z">
+                                        </path>
+                                    </svg>
+                                    <span class="header__navbar-mobile-item-bage">1</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header-mobile__menu">
+            <ul class="header__menu-list">
+                <li class="menu-item current-menu-item">
+                    <a href="">
+                        <span class="menu-item__icon">
+                            <svg viewBox="0 0 28 28" height="28" width="28">
+                                <path
+                                    d="M17.5 23.979 21.25 23.979C21.386 23.979 21.5 23.864 21.5 23.729L21.5 13.979C21.5 13.427 21.949 12.979 22.5 12.979L24.33 12.979 14.017 4.046 3.672 12.979 5.5 12.979C6.052 12.979 6.5 13.427 6.5 13.979L6.5 23.729C6.5 23.864 6.615 23.979 6.75 23.979L10.5 23.979 10.5 17.729C10.5 17.04 11.061 16.479 11.75 16.479L16.25 16.479C16.939 16.479 17.5 17.04 17.5 17.729L17.5 23.979ZM21.25 25.479 17 25.479C16.448 25.479 16 25.031 16 24.479L16 18.327C16 18.135 15.844 17.979 15.652 17.979L12.348 17.979C12.156 17.979 12 18.135 12 18.327L12 24.479C12 25.031 11.552 25.479 11 25.479L6.75 25.479C5.784 25.479 5 24.695 5 23.729L5 14.479 3.069 14.479C2.567 14.479 2.079 14.215 1.868 13.759 1.63 13.245 1.757 12.658 2.175 12.29L13.001 2.912C13.248 2.675 13.608 2.527 13.989 2.521 14.392 2.527 14.753 2.675 15.027 2.937L25.821 12.286C25.823 12.288 25.824 12.289 25.825 12.29 26.244 12.658 26.371 13.245 26.133 13.759 25.921 14.215 25.434 14.479 24.931 14.479L23 14.479 23 23.729C23 24.695 22.217 25.479 21.25 25.479Z">
+                                </path>
+                            </svg>
+                        </span>
+                        <span class="menu-item__icon-active">
+                            <svg viewBox="0 0 28 28" height="28" width="28">
+                                <path
+                                    d="M25.825 12.29C25.824 12.289 25.823 12.288 25.821 12.286L15.027 2.937C14.752 2.675 14.392 2.527 13.989 2.521 13.608 2.527 13.248 2.675 13.001 2.912L2.175 12.29C1.756 12.658 1.629 13.245 1.868 13.759 2.079 14.215 2.567 14.479 3.069 14.479L5 14.479 5 23.729C5 24.695 5.784 25.479 6.75 25.479L11 25.479C11.552 25.479 12 25.031 12 24.479L12 18.309C12 18.126 12.148 17.979 12.33 17.979L15.67 17.979C15.852 17.979 16 18.126 16 18.309L16 24.479C16 25.031 16.448 25.479 17 25.479L21.25 25.479C22.217 25.479 23 24.695 23 23.729L23 14.479 24.931 14.479C25.433 14.479 25.921 14.215 26.132 13.759 26.371 13.245 26.244 12.658 25.825 12.29">
+                                </path>
+                            </svg>
+                        </span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="">
+                        <span class="menu-item__icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                <path d="M16.604 11.048a5.67 5.67 0 0 0 .751-3.44c-.179-1.784-1.175-3.361-2.803-4.44l-1.105 1.666c1.119.742 1.8 1.799 1.918 2.974a3.693 3.693 0 0 1-1.072 2.986l-1.192 1.192 1.618.475C18.951 13.701 19 17.957 19 18h2c0-1.789-.956-5.285-4.396-6.952z"></path><path d="M9.5 12c2.206 0 4-1.794 4-4s-1.794-4-4-4-4 1.794-4 4 1.794 4 4 4zm0-6c1.103 0 2 .897 2 2s-.897 2-2 2-2-.897-2-2 .897-2 2-2zm1.5 7H8c-3.309 0-6 2.691-6 6v1h2v-1c0-2.206 1.794-4 4-4h3c2.206 0 4 1.794 4 4v1h2v-1c0-3.309-2.691-6-6-6z"></path>
+                            </svg>
+                        </span>
+                        <span class="menu-item__icon-active">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M9.5 12c2.206 0 4-1.794 4-4s-1.794-4-4-4-4 1.794-4 4 1.794 4 4 4zm1.5 1H8c-3.309 0-6 2.691-6 6v1h15v-1c0-3.309-2.691-6-6-6z"></path><path d="M16.604 11.048a5.67 5.67 0 0 0 .751-3.44c-.179-1.784-1.175-3.361-2.803-4.44l-1.105 1.666c1.119.742 1.8 1.799 1.918 2.974a3.693 3.693 0 0 1-1.072 2.986l-1.192 1.192 1.618.475C18.951 13.701 19 17.957 19 18h2c0-1.789-.956-5.285-4.396-6.952z"></path></svg>
+                        </span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="">
+                        <span class="menu-item__icon">
+                            <svg viewBox="0 0 28 28" height="28" width="28">
+                                <path
+                                    d="M25.5 14C25.5 7.649 20.351 2.5 14 2.5 7.649 2.5 2.5 7.649 2.5 14 2.5 20.351 7.649 25.5 14 25.5 20.351 25.5 25.5 20.351 25.5 14ZM27 14C27 21.18 21.18 27 14 27 6.82 27 1 21.18 1 14 1 6.82 6.82 1 14 1 21.18 1 27 6.82 27 14ZM7.479 14 7.631 14C7.933 14 8.102 14.338 7.934 14.591 7.334 15.491 6.983 16.568 6.983 17.724L6.983 18.221C6.983 18.342 6.99 18.461 7.004 18.578 7.03 18.802 6.862 19 6.637 19L6.123 19C5.228 19 4.5 18.25 4.5 17.327 4.5 15.492 5.727 14 7.479 14ZM20.521 14C22.274 14 23.5 15.492 23.5 17.327 23.5 18.25 22.772 19 21.878 19L21.364 19C21.139 19 20.97 18.802 20.997 18.578 21.01 18.461 21.017 18.342 21.017 18.221L21.017 17.724C21.017 16.568 20.667 15.491 20.067 14.591 19.899 14.338 20.067 14 20.369 14L20.521 14ZM8.25 13C7.147 13 6.25 11.991 6.25 10.75 6.25 9.384 7.035 8.5 8.25 8.5 9.465 8.5 10.25 9.384 10.25 10.75 10.25 11.991 9.353 13 8.25 13ZM19.75 13C18.647 13 17.75 11.991 17.75 10.75 17.75 9.384 18.535 8.5 19.75 8.5 20.965 8.5 21.75 9.384 21.75 10.75 21.75 11.991 20.853 13 19.75 13ZM15.172 13.5C17.558 13.5 19.5 15.395 19.5 17.724L19.5 18.221C19.5 19.202 18.683 20 17.677 20L10.323 20C9.317 20 8.5 19.202 8.5 18.221L8.5 17.724C8.5 15.395 10.441 13.5 12.828 13.5L15.172 13.5ZM16.75 9C16.75 10.655 15.517 12 14 12 12.484 12 11.25 10.655 11.25 9 11.25 7.15 12.304 6 14 6 15.697 6 16.75 7.15 16.75 9Z">
+                                </path>
+                            </svg>
+                        </span>
+                        <span class="menu-item__icon-active">
+                            <svg viewBox="0 0 28 28" height="28" width="28">
+                                <path
+                                    d="M21.877 19 21.364 19C21.139 19 20.971 18.802 20.996 18.577 21.01 18.461 21.017 18.342 21.017 18.221L21.017 17.724C21.017 16.568 20.667 15.491 20.066 14.591 19.899 14.338 20.067 14 20.369 14L20.521 14C22.274 14 23.5 15.492 23.5 17.327 23.5 18.25 22.772 19 21.877 19ZM17.75 10.75C17.75 9.384 18.535 8.5 19.75 8.5 20.965 8.5 21.75 9.384 21.75 10.75 21.75 11.991 20.853 13 19.75 13 18.647 13 17.75 11.991 17.75 10.75ZM19.5 18.221C19.5 19.202 18.682 20 17.678 20L10.323 20C9.317 20 8.5 19.202 8.5 18.221L8.5 17.724C8.5 15.395 10.442 13.5 12.828 13.5L15.173 13.5C17.559 13.5 19.5 15.395 19.5 17.724L19.5 18.221ZM6.25 10.75C6.25 9.384 7.035 8.5 8.25 8.5 9.465 8.5 10.25 9.384 10.25 10.75 10.25 11.991 9.353 13 8.25 13 7.147 13 6.25 11.991 6.25 10.75ZM7.934 14.591C7.334 15.491 6.983 16.568 6.983 17.724L6.983 18.221C6.983 18.342 6.991 18.461 7.004 18.577 7.03 18.802 6.861 19 6.637 19L6.123 19C5.228 19 4.5 18.25 4.5 17.327 4.5 15.492 5.727 14 7.479 14L7.631 14C7.933 14 8.102 14.338 7.934 14.591ZM14 6C15.697 6 16.75 7.15 16.75 9 16.75 10.655 15.517 12 14 12 12.484 12 11.25 10.655 11.25 9 11.25 7.15 12.304 6 14 6ZM14 1C6.832 1 1 6.832 1 14 1 21.169 6.832 27 14 27 21.169 27 27 21.169 27 14 27 6.832 21.169 1 14 1Z">
+                                </path>
+                            </svg>
+                        </span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="">
+                        <span class="menu-item__icon">
+                            <svg viewBox="0 0 28 28" height="28" width="28">
+                                <path
+                                    d="M8.75 25.25C8.336 25.25 8 24.914 8 24.5 8 24.086 8.336 23.75 8.75 23.75L19.25 23.75C19.664 23.75 20 24.086 20 24.5 20 24.914 19.664 25.25 19.25 25.25L8.75 25.25ZM17.163 12.846 12.055 15.923C11.591 16.202 11 15.869 11 15.327L11 9.172C11 8.631 11.591 8.297 12.055 8.576L17.163 11.654C17.612 11.924 17.612 12.575 17.163 12.846ZM21.75 20.25C22.992 20.25 24 19.242 24 18L24 6.5C24 5.258 22.992 4.25 21.75 4.25L6.25 4.25C5.008 4.25 4 5.258 4 6.5L4 18C4 19.242 5.008 20.25 6.25 20.25L21.75 20.25ZM21.75 21.75 6.25 21.75C4.179 21.75 2.5 20.071 2.5 18L2.5 6.5C2.5 4.429 4.179 2.75 6.25 2.75L21.75 2.75C23.821 2.75 25.5 4.429 25.5 6.5L25.5 18C25.5 20.071 23.821 21.75 21.75 21.75Z">
+                                </path>
+                            </svg>
+                        </span>
+                        <span class="menu-item__icon-active">
+                            <svg viewBox="0 0 28 28" height="28" width="28">
+                                <path
+                                    d="M8.75 25.25C8.336 25.25 8 24.914 8 24.5 8 24.086 8.336 23.75 8.75 23.75L19.25 23.75C19.664 23.75 20 24.086 20 24.5 20 24.914 19.664 25.25 19.25 25.25L8.75 25.25ZM17.164 12.846 12.055 15.923C11.591 16.202 11 15.869 11 15.327L11 9.172C11 8.631 11.591 8.297 12.055 8.576L17.164 11.654C17.612 11.924 17.612 12.575 17.164 12.846M21.75 2.75 6.25 2.75C4.182 2.75 2.5 4.432 2.5 6.5L2.5 18C2.5 20.068 4.182 21.75 6.25 21.75L21.75 21.75C23.818 21.75 25.5 20.068 25.5 18L25.5 6.5C25.5 4.432 23.818 2.75 21.75 2.75">
+                                </path>
+                            </svg>
+                        </span>
+                        <span class="header__navbar-mobile-item-bage">99+</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="">
+                        <span class="menu-item__icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M19 13.586V10c0-3.217-2.185-5.927-5.145-6.742C13.562 2.52 12.846 2 12 2s-1.562.52-1.855 1.258C7.185 4.074 5 6.783 5 10v3.586l-1.707 1.707A.996.996 0 0 0 3 16v2a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1v-2a.996.996 0 0 0-.293-.707L19 13.586zM19 17H5v-.586l1.707-1.707A.996.996 0 0 0 7 14v-4c0-2.757 2.243-5 5-5s5 2.243 5 5v4c0 .266.105.52.293.707L19 16.414V17zm-7 5a2.98 2.98 0 0 0 2.818-2H9.182A2.98 2.98 0 0 0 12 22z"></path></svg>
+                        </span>
+                        <span class="menu-item__icon-active">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" ><path d="M12 22a2.98 2.98 0 0 0 2.818-2H9.182A2.98 2.98 0 0 0 12 22zm7-7.414V10c0-3.217-2.185-5.927-5.145-6.742C13.562 2.52 12.846 2 12 2s-1.562.52-1.855 1.258C7.185 4.074 5 6.783 5 10v4.586l-1.707 1.707A.996.996 0 0 0 3 17v1a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1v-1a.996.996 0 0 0-.293-.707L19 14.586z"></path></svg>
+                        </span>
+                        <span class="header__navbar-mobile-item-bage">1</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <!-- End Header Mobile -->
+
+    <main class="main">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="main__inner">
+                        <div class="sidebar__left hide-on-mobile-tablet">
+                            <div class="sidebar__main">
+                                <ul class="sidebar__list">
+                                    <li class="sidebar__list-item sidebar__list-item-account">
+                                        <a href="" class="sidebar__item-link">
+                                            <img src="assets/images/avatar.png" alt="" class="sidebar__item-img">
+                                            <span class="sidebar__item-text">Tuyết Lan</span>
+                                        </a>
+                                    </li>
+                                    <li class="sidebar__list-item">
+                                        <a href="" class="sidebar__item-link">
+                                            <img src="assets/images/ic-friend.png" alt="" class="sidebar__item-img">
+                                            <span class="sidebar__item-text">Bạn bè</span>
+                                        </a>
+                                    </li>
+                                    <li class="sidebar__list-item">
+                                        <a href="" class="sidebar__item-link">
+                                            <img src="assets/images/ic-messenger-png.png" alt=""
+                                                class="sidebar__item-img">
+                                            <span class="sidebar__item-text">Tin nhắn</span>
+                                        </a>
+                                    </li>
+                                    <li class="sidebar__list-item">
+                                        <a href="" class="sidebar__item-link">
+                                            <img src="assets/images/ic-group.png" alt="" class="sidebar__item-img">
+                                            <span class="sidebar__item-text">Nhóm</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="main__content">
+                            <div class="box-livechat box-white">
+                                Livechat here...
+                            </div>
+                            <div class="story">
+                                <div class="story__main">
+                                    <div class="story__item story-add-new">
+                                        <a href="" class="story__item-link">
+                                            <div class="story__item-wrap">
+                                                <div class="story__item-inner">
+                                                    <div class="story__item-column">
+                                                        <div class="story__item-box-img">
+                                                            <img src="assets/images/img-story-add.png" alt=""
+                                                                class="story__item-img">
+                                                        </div>
+                                                        <div class="story__item-box-text">
+                                                            <div class="story__item-btn-wrap">
+                                                                <div class="story__item-btn-text">
+                                                                    <svg viewBox="0 0 20 20" width="1em" height="1em">
+                                                                        <g fill-rule="evenodd"
+                                                                            transform="translate(-446 -350)">
+                                                                            <g fill-rule="nonzero">
+                                                                                <path
+                                                                                    d="M95 201.5h13a1 1 0 1 0 0-2H95a1 1 0 1 0 0 2z"
+                                                                                    transform="translate(354.5 159.5)">
+                                                                                </path>
+                                                                                <path
+                                                                                    d="M102.5 207v-13a1 1 0 1 0-2 0v13a1 1 0 1 0 2 0z"
+                                                                                    transform="translate(354.5 159.5)">
+                                                                                </path>
+                                                                            </g>
+                                                                        </g>
+                                                                    </svg>
+                                                                </div>
+                                                            </div>
+                                                            <span>Tạo tin mới</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="story__item story__item-popup">
+                                        <a href="" class="story__item-link">
+                                            <div class="story__item-wrap">
+                                                <div class="story__item-inner">
+                                                    <div class="story__item-column">
+                                                        <div class="story__item-box-img">
+                                                            <img src="assets/images/img-story-1.png" alt=""
+                                                                class="story__item-img">
+                                                            <div class="story__overlay"></div>
+                                                        </div>
+                                                        <div class="story__item-text">
+                                                            <span>Doãn Chí Bình</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="story__item story__item-popup">
+                                        <a href="" class="story__item-link">
+                                            <div class="story__item-wrap">
+                                                <div class="story__item-inner">
+                                                    <div class="story__item-column">
+                                                        <div class="story__item-box-img">
+                                                            <img src="assets/images/img-story-2.png" alt=""
+                                                                class="story__item-img">
+                                                            <div class="story__overlay"></div>
+                                                        </div>
+                                                        <div class="story__item-text">
+                                                            <span>Phương Linh</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="story__item story__item-popup">
+                                        <a href="" class="story__item-link">
+                                            <div class="story__item-wrap">
+                                                <div class="story__item-inner">
+                                                    <div class="story__item-column">
+                                                        <div class="story__item-box-img">
+                                                            <img src="assets/images/img-story-3.png" alt=""
+                                                                class="story__item-img">
+                                                            <div class="story__overlay"></div>
+                                                        </div>
+                                                        <div class="story__item-text">
+                                                            <span>Tiểu Vy</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="story__item story__item-popup">
+                                        <a href="" class="story__item-link">
+                                            <div class="story__item-wrap">
+                                                <div class="story__item-inner">
+                                                    <div class="story__item-column">
+                                                        <div class="story__item-box-img">
+                                                            <img src="assets/images/img-story-1.png" alt=""
+                                                                class="story__item-img">
+                                                            <div class="story__overlay"></div>
+                                                        </div>
+                                                        <div class="story__item-text">
+                                                            <span>Doãn Chí Bình</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="story__item story__item-popup">
+                                        <a href="" class="story__item-link">
+                                            <div class="story__item-wrap">
+                                                <div class="story__item-inner">
+                                                    <div class="story__item-column">
+                                                        <div class="story__item-box-img">
+                                                            <img src="assets/images/img-story-2.png" alt=""
+                                                                class="story__item-img">
+                                                            <div class="story__overlay"></div>
+                                                        </div>
+                                                        <div class="story__item-text">
+                                                            <span>Phương Linh</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="story__item story__item-popup">
+                                        <a href="" class="story__item-link">
+                                            <div class="story__item-wrap">
+                                                <div class="story__item-inner">
+                                                    <div class="story__item-column">
+                                                        <div class="story__item-box-img">
+                                                            <img src="assets/images/img-story-3.png" alt=""
+                                                                class="story__item-img">
+                                                            <div class="story__overlay"></div>
+                                                        </div>
+                                                        <div class="story__item-text">
+                                                            <span>Tiểu Vy</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="story__item story__item-popup">
+                                        <a href="" class="story__item-link">
+                                            <div class="story__item-wrap">
+                                                <div class="story__item-inner">
+                                                    <div class="story__item-column">
+                                                        <div class="story__item-box-img">
+                                                            <img src="assets/images/img-story-1.png" alt=""
+                                                                class="story__item-img">
+                                                            <div class="story__overlay"></div>
+                                                        </div>
+                                                        <div class="story__item-text">
+                                                            <span>Doãn Chí Bình</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="story__item story__item-popup">
+                                        <a href="" class="story__item-link">
+                                            <div class="story__item-wrap">
+                                                <div class="story__item-inner">
+                                                    <div class="story__item-column">
+                                                        <div class="story__item-box-img">
+                                                            <img src="assets/images/img-story-2.png" alt=""
+                                                                class="story__item-img">
+                                                            <div class="story__overlay"></div>
+                                                        </div>
+                                                        <div class="story__item-text">
+                                                            <span>Phương Linh</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="story__item story__item-popup">
+                                        <a href="" class="story__item-link">
+                                            <div class="story__item-wrap">
+                                                <div class="story__item-inner">
+                                                    <div class="story__item-column">
+                                                        <div class="story__item-box-img">
+                                                            <img src="assets/images/img-story-3.png" alt=""
+                                                                class="story__item-img">
+                                                            <div class="story__overlay"></div>
+                                                        </div>
+                                                        <div class="story__item-text">
+                                                            <span>Tiểu Vy</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="story__item story__item-popup">
+                                        <a href="" class="story__item-link">
+                                            <div class="story__item-wrap">
+                                                <div class="story__item-inner">
+                                                    <div class="story__item-column">
+                                                        <div class="story__item-box-img">
+                                                            <img src="assets/images/img-story-1.png" alt=""
+                                                                class="story__item-img">
+                                                            <div class="story__overlay"></div>
+                                                        </div>
+                                                        <div class="story__item-text">
+                                                            <span>Doãn Chí Bình</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="story__item story__item-popup">
+                                        <a href="" class="story__item-link">
+                                            <div class="story__item-wrap">
+                                                <div class="story__item-inner">
+                                                    <div class="story__item-column">
+                                                        <div class="story__item-box-img">
+                                                            <img src="assets/images/img-story-2.png" alt=""
+                                                                class="story__item-img">
+                                                            <div class="story__overlay"></div>
+                                                        </div>
+                                                        <div class="story__item-text">
+                                                            <span>Phương Linh</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="box-content box-white">Editor Post here</div>
+                            <div class="box-content box-white">Post Content</div>
+                            <div class="box-content box-white">Post Content</div>
+                            <div class="box-content box-white">Post Content</div>
+                            <div class="box-content box-white">Post Content</div>
+                            <div class="box-content box-white">Post Content</div>
+                            <div class="box-content box-white">Post Content</div>
+                        </div>
+                        <div class="sidebar__right hide-on-mobile-tablet">
+                            <div class="sidebar__main">
+                                <div class="box-content box-white">
+                                    content
+                                </div>
+                                <div class="box-content box-white">
+                                    content
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div class="popup__story">
+        <div class="popup__overlay"></div>
+        <div class="popup__story-body">
+            <div class="popup__story-wrap">
+                <div class="popup__story-box-img">
+                    <img src="https://via.placeholder.com/376x667" alt="" class="popup__story-img">
+                    <div class="popup__story-overlay"></div>
+                </div>
+                <div class="popup__story-control">
+                    <div id="progress__bar-story" class="progress__bar"></div>
+                    <div class="popup__story-text">
+                        <span class="popup__story-name">Doãn Chí Bình</span>
+                        <div class="popup__story-btn-wrap">
+                            <div class="popup__story-btn-play"></div>
+                            <div class="popup__story-btn-close">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                    <path
+                                        d="m16.192 6.344-4.243 4.242-4.242-4.242-1.414 1.414L10.535 12l-4.242 4.242 1.414 1.414 4.242-4.242 4.243 4.242 1.414-1.414L13.364 12l4.242-4.242z">
+                                    </path>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Script -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="libs/slick/slick.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
