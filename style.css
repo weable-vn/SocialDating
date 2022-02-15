@@ -777,7 +777,14 @@
 @media (min-width: 740px) and (max-width: 1023px) {}
 
 /* Mobile */
-@media (max-width: 739px) {}
+@media (max-width: 739px) {
+    .story__main {
+        margin: 0 -5px;
+    }
+    .story__item {
+        padding: 0 5px;
+    }
+}
 
 
 /* END RESPONSIVE */
